@@ -21,3 +21,14 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Add
+        run: |
+          git add .
+      - name: Commit
+        run: |
+          git commit -m 'deploy'
+      - name: Push
+        run: |
+          git push -f origin deploy-stage
+        shell: bash
+

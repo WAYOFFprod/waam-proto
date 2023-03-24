@@ -1,4 +1,4 @@
-name: Docker-image
+name: Build svelte app
 
 on:
   push:
@@ -18,6 +18,6 @@ jobs:
       - name: Checkout
         run: git checkout -b deploy
       - name: Install
-        run: npm ci
+        run: npm install
       - name: Build
         run: npm run build

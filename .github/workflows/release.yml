@@ -44,6 +44,6 @@ jobs:
           git commit -m 'deploy'
       - name: Push
         run: |
-          git push -f origin deploy-stage
+          git push -f origin deploy-branch
         shell: bash
 

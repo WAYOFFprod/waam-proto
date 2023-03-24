@@ -5,18 +5,14 @@ on:
     branches:
       - master
 
-env:
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
-          repo-token: ${{ secrets.TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v3
         with:
           node-version: 16.15.1

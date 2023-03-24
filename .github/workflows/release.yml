@@ -15,6 +15,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.1
+      - name: Config name
+        run: |
+          git config --global user.name "Raphael"
+      - name: Config email
+        run: |         
+          git config --global user.email "raphael@wayoff.ch"
       - name: Checkout
         run: git checkout -b deploy
       - name: Install

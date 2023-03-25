@@ -30,7 +30,7 @@ jobs:
         run: npm run build
       - name: Cleanup
         run: |
-          rm -r .gitignore node_modules .vscode src static .npmrc package.json postcss.config.cjs README.md svelte.config.js tsconfig.json vite.config.ts
+          rm -r .gitignore node_modules .vscode src static .npmrc package.json postcss.config.cjs README.md svelte.config.js tsconfig.json vite.config.ts tailwind.config.cjs .svelte-kit .github/workflows
       - name: Change to build folder
         run: |
           cd build/

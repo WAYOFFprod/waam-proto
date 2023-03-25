@@ -1,3 +1,7 @@
-<div class="container min-h-screen flex justify-center items-center">
-  <h1 class="text-6xl font-bold text-center">WAAM</h1>
+<script>
+  import LoadingWaam from "../compontents/LoadingWaam.svelte";
+</script>
+
+<div class="container min-h-screen">
+  <LoadingWaam />
 </div>

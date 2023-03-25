@@ -33,7 +33,7 @@ jobs:
           rm -r .gitignore
       - name: Change to build folder
         run: |
-          cd .svelte-kit/
+          cd build/
       - name: Add
         run: |
           git add .

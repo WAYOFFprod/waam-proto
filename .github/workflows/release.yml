@@ -31,9 +31,12 @@ jobs:
       - name: Cleanup
         run: |
           rm -r .gitignore node_modules .vscode src static .npmrc package.json postcss.config.cjs README.md svelte.config.js tsconfig.json vite.config.ts tailwind.config.cjs .svelte-kit .github/workflows
-      - name: Change to build folder
+      - name: move content of build folder
         run: |
-          cd build/
+          mv build/ .
+      - name: Cleanup more
+        run: |
+          rm -r build
       - name: Add
         run: |
           git add .

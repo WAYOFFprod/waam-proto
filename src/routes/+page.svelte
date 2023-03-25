@@ -1,1 +1,3 @@
-<h1 class="text-3xl bg-red-100 font-bold underline">Hello world!</h1>
+<div class="container min-h-screen flex justify-center items-center">
+  <h1 class="text-3xlfont-bold text-center">WAAM</h1>
+</div>

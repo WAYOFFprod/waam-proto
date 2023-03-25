@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	/* ::selection {
+    color: white;
+    background: #ff7d0050;
+  } */
+	body {
+		font-family: 'Archivo', 'Helvetica', sans-serif;
+		color: black;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: black;
+	}
+
+	h1,
+	h2 {
+		font-size: theme(fontSize.xl);
+	}
+
+	h2 {
+		margin-bottom: 1.5rem;
+	}
+
+	p {
+		margin-bottom: 1.2rem;
+	}
+
+	p a {
+		color: theme(colors.morange);
+		font-weight: theme(fontWeight.extrabold);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+}
+
+/* Utility classes (.card, .btn, etc.) */
+@layer components {
+}
+
+/* CSS features that Tailwind doesn’t include utilities for out of the box */
+@layer utilities {
+	/* overriding tailwind container for desktop first */
+	.container {
+		@apply mx-auto;
+		max-width: 1400px;
+	}
+
+	@screen lg {
+		.container {
+			max-width: 1200px;
+		}
+	}
+
+	@screen md {
+		.container {
+			max-width: 900px;
+		}
+	}
+
+	@screen xs {
+		.container {
+			max-width: 100%;
+		}
+	}
+}

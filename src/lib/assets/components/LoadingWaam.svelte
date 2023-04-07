@@ -48,7 +48,7 @@
       duration: 400,
     }).add(
       {
-        targets: "#loading-page",
+        targets: "#background-image",
         opacity: 0,
         easing: "easeOutExpo",
       },
@@ -58,8 +58,13 @@
 
   onMount(() => {
     anime({
+      targets: "#loading-page",
+      opacity: 1,
+      duration: 1000,
+    });
+    anime({
       targets: "#background-image",
-      translateX: 30,
+      translateX: -20,
       duration: 10000,
       loop: true,
       direction: "alternate",
@@ -68,12 +73,12 @@
   });
 </script>
 
-<div id="loading-page" class="w-full h-full">
+<div id="loading-page" class="relative overflow-hidden">
   <div
     id="background-image"
-    class="absolute top-0 right-0 bottom-0 left-0 loading-background bg-cover"
+    class="absolute top-0 right-0 bottom-0 left-0 bg-fit"
   />
-  <div class="min-h-screen flex flex-col justify-center items-center">
+  <div class="relative min-h-screen flex flex-col justify-center items-center">
     <button
       bind:this={icon}
       id="logo"
@@ -105,14 +110,12 @@
 </div>
 
 <style>
-  .loading-background::before {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
+  #loading-page {
+    opacity: 0;
+  }
+  #background-image {
     background-image: url($lib/assets/images/background.jpg);
+    scale: 1.2;
   }
   .logo-image {
     background-image: url($lib/assets/images/logo.jpg);

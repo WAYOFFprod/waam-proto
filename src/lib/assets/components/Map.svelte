@@ -15,6 +15,8 @@
     ],
   };
 
+  // const markers: Record<Markers>
+
   let map = null;
   onMount(() => {
     async function initMap(): Promise<void> {

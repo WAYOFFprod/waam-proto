@@ -1,7 +1,7 @@
 <script>
-  import LoadingWaam from "../compontents/LoadingWaam.svelte";
+  import LoadingWaam from "$lib/assets/components/LoadingWaam.svelte";
 </script>
 
-<div class="container min-h-screen">
+<div>
   <LoadingWaam />
 </div>

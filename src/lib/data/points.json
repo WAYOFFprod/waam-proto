@@ -75,7 +75,6 @@
         "value": "Il n’y a pas billetterie mais une donation de 5 à 10 CHF est apprécié, tout comme vos commentaires et photos pour embellir nos souvenir avec vous."
       }
     ],
-    "cta": "Faire une donation",
     "lng": 6.922474,
     "lat": 46.396780,
     "comments": [
@@ -123,7 +122,6 @@
         "value": "Un tunnel entre la route cantonale et le bord du lac de Villeneuve est transformé en aquarium. L’association Chromatix (artiste) réalise avec l’animation jeunesse de la ville de Villeneuve une fresque marine. Maintenant, en traversant ce sous-passage on passe dans un tunnel trompe l’oeil où des animaux marins se baladent."
       }
     ],
-    "cta": "Faire une donation",
     "lng": 6.925724,
     "lat": 46.400902,
     "comments": [
@@ -154,6 +152,178 @@
           {
             "type": "text",
             "value": "Il y a que ca de vrais =)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Rue des remparts",
+    "image": "rue-des-ramparts.jpeg",
+    "description": [
+      {
+        "type": "text",
+        "value": "L'actuelle rue des Remparts témoigne des remparts qui entouraient autrefois la ville de Villeneuve. C'est de là que vient le nom de la rue. C'est au cours des 11ème et 12ème siècles que Villeneuve s'est développée, suite à la construction du château de Chillon par la famille comtale de Savoie. Villeneuve avait pour fonction de gérer le trafic marchand entre l'Italie et les Flandres via le Grand-Saint-Bernard."
+      }
+    ],
+    "lng": 6.926154,
+    "lat": 46.397971,
+    "comments": [
+      {
+        "meta": {
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Savez-vous que Peiz comme dans l’île de Peiz ou la tour de Peiz est un mots du patois savoyard pour dire poile? Donc l’arbre sur l’île de Peiz est un poile :-)"
+          }
+        ]
+      },
+      {
+        "meta":{
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Connaissez-vous le sentier du facteur vers la route des Valleyres. Elle a été créé à l’époque où le facteur était à vélo. Sa lui permettait de couper à travers les bois lors de sa tournée; lui enlevant de devoir descendre jusqu’au Crêt"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Église Saint-Paul",
+    "image": "eglise-saint-paul.jpeg",
+    "description": [
+      {
+        "type": "text",
+        "value": "L'église Saint-Paul semble dater du XIIème siècle. Elle est riche de plusieurs peintures, gravures et vitraux, montrant non seulement la vie de Saint-Paul, mais aussi la richesse du petit bourg qu'est Villeneuve. Des panneaux explicatifs se trouvent à son entrée. L'église est affectée au culte réformé depuis 1536."
+      }
+    ],
+    "lng": 6.925103,
+    "lat": 46.396257,
+    "comments": [
+      {
+        "meta": {
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Les vitraux sont magnifique!"
+          },
+          {
+            "type": "image",
+            "value": "eglise-saint-paul-vitraux.jpeg"
+          }
+        ]
+      },
+      {
+        "meta":{
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Un magnifique trop l’oeil se cache dans ce mural"
+          },
+          {
+            "type": "image",
+            "value": "eglise-saint-paul-2.jpeg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Theatre Odéon",
+    "image": "theatre-odeon.png",
+    "description": [
+      {
+        "type": "text",
+        "value": "Vous n’êtes pas au courant? Lucas est homo! Alors, évidemment, rien de grave… Mais pour la dizaine de personnages invités dans les 23 sketches de «Rien prouvé», il faut quand même se faire à l’idée"
+      },
+      {
+        "type": "text",
+        "value": "Rien n’est futile. Tout est grave… La famille, quoi."
+      }
+    ],
+    "cta": "22.- Acheter un billet",
+    "lng": 6.924488,
+    "lat": 46.396484,
+    "comments": [
+      {
+        "meta": {
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Mais qu’est ce qu’il est drôle.j’ai tellement rigoler! Et il avait qu’une chaise et deux bout de papier!"
+          }
+        ]
+      },
+      {
+        "meta":{
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "image",
+            "value": "theatre.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Jardin Médiéval",
+    "image": "jardin-med.jpeg",
+    "description": [
+      {
+        "type": "text",
+        "value": "Au cœur de la vieille ville de Villeneuve se trouve ce petit paradis accueillant tous les curieux pour se reposer ou préparer le repas. Le jardin commémore le 800ème anniversaire de Villeneuve en 2014. Tous les fruits, légumes ou herbes sont libres d'être utilisés. Des journées de jardinage sont également organisées pour les curieux."
+      }
+    ],
+    "lng": 6.923603,
+    "lat": 46.396183,
+    "comments": [
+      {
+        "meta": {
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "C’est le printemps! Ca commence à pousser!"
+          }
+        ]
+      },
+      {
+        "meta":{
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "J’y ai vu les fleurs du chocolat. Connaissez vous de vieilles recettes?"
+          },
+          {
+            "type": "image",
+            "value": "flower.jpg"
+          }
+        ]
+      },
+      {
+        "meta":{
+          "author": "Olivier"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Les poireaux sauvages résistent bien au gel en hiver, ils peuvent donc remplacer l'ail des ours qui n'est pas encore là."
           }
         ]
       }

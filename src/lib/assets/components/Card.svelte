@@ -128,9 +128,11 @@
             {value}
           </p>
         {/each}
-        <button class="rounded-full bg-blue-500 px-4 py-2 w-full mb-4"
-          >{marker.cta}</button
-        >
+        {#if marker.cta}
+          <button class="rounded-full bg-blue-500 px-4 py-2 w-full mb-4"
+            >{marker.cta}</button
+          >
+        {/if}
         <div class="flex w-full gap-2 mb-4">
           <button class="rounded-full bg-green-500 px-4 py-2 grow"
             >Commenter</button

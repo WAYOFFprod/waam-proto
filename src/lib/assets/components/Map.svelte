@@ -1,7 +1,10 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from "svelte";
+  import Api from "../utils/api";
 
   export let markers: any = [];
+
+  const api = Api.getInstance();
 
   const dispatch = createEventDispatcher();
 
@@ -19,9 +22,13 @@
     ],
   };
 
+  const { encoding } = (await google.maps.importLibrary(
+    "geometry"
+  )) as google.maps.GeometryLibrary;
+
   // const markers: Record<Markers>
   let userMarker = null;
-  let map = null;
+  let map: google.maps.Map | null = null;
   onMount(() => {
     async function initMap(): Promise<void> {
       const iconBase = "/markers/";
@@ -69,6 +76,26 @@
 
     initMap();
   });
+
+  // TODO: trigger when location selected
+  const goTo = () => {
+    const start = { lat: 46.398397265692246, lng: 6.926791974586442 };
+    const end = { lng: 6.918112, lat: 46.394107 };
+    api.post(start, end).then((response) => {
+      console.log(response.routes[0].polyline.encodedPolyline);
+      const path = encoding.decodePath(
+        response.routes[0].polyline.encodedPolyline
+      );
+      const pathPoly = new google.maps.Polyline({
+        path: path,
+        geodesic: true,
+        strokeColor: "#FF0000",
+        strokeOpacity: 1.0,
+        strokeWeight: 2,
+      });
+      pathPoly.setMap(map);
+    });
+  };
 </script>
 
 <svelte:head>

@@ -20,7 +20,7 @@
   };
 
   // const markers: Record<Markers>
-
+  let userMarker = null;
   let map = null;
   onMount(() => {
     async function initMap(): Promise<void> {
@@ -28,6 +28,9 @@
       const icons: Record<string, { icon: string }> = {
         point: {
           icon: iconBase + "point.svg",
+        },
+        user: {
+          icon: iconBase + "user.svg",
         },
       };
       //@ts-ignore
@@ -41,6 +44,8 @@
         disableDefaultUI: true,
         styles: styles["default"],
       });
+
+      // add points
       for (let i = 0; i < markers.length; i++) {
         const marker = markers[i];
         const m = new google.maps.Marker({
@@ -53,6 +58,13 @@
           dispatch("selectMarker", { id: i });
         });
       }
+
+      // add user location marker
+      userMarker = new google.maps.Marker({
+        position: { lat: 46.398397265692246, lng: 6.926791974586442 },
+        icon: icons["user"].icon,
+        map: map,
+      });
     }
 
     initMap();

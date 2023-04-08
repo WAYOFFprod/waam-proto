@@ -1,5 +1,9 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { createEventDispatcher, onMount } from "svelte";
+
+  export let markers: any = [];
+
+  const dispatch = createEventDispatcher();
 
   const styles: Record<string, google.maps.MapTypeStyle[]> = {
     default: [
@@ -20,14 +24,35 @@
   let map = null;
   onMount(() => {
     async function initMap(): Promise<void> {
+      const iconBase = "/markers/";
+      const icons: Record<string, { icon: string }> = {
+        point: {
+          icon: iconBase + "point.svg",
+        },
+      };
       //@ts-ignore
-      const { Map } = await google.maps.importLibrary("maps");
+      const { Map } = (await google.maps.importLibrary(
+        "maps"
+      )) as google.maps.MapsLibrary;
+
       map = new Map(document.getElementById("map") as HTMLElement, {
         center: { lat: 46.397861557376075, lng: 6.926938859088941 },
-        zoom: 15,
+        zoom: 14,
         disableDefaultUI: true,
         styles: styles["default"],
       });
+      for (let i = 0; i < markers.length; i++) {
+        const marker = markers[i];
+        const m = new google.maps.Marker({
+          position: { lat: marker.lat, lng: marker.lng },
+          icon: icons["point"].icon,
+          map: map,
+        });
+        m.set("dataId", i);
+        m.addListener("click", () => {
+          dispatch("selectMarker", { id: i });
+        });
+      }
     }
 
     initMap();

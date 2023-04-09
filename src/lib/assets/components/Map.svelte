@@ -4,7 +4,11 @@
 
   export let markers: any = [];
 
+  let polyline: undefined | google.maps.Polyline;
+
   const api = Api.getInstance();
+
+  const startCoords = { lat: 46.398397265692246, lng: 6.926791974586442 };
 
   const dispatch = createEventDispatcher();
 
@@ -22,12 +26,8 @@
     ],
   };
 
-  const { encoding } = (await google.maps.importLibrary(
-    "geometry"
-  )) as google.maps.GeometryLibrary;
-
   // const markers: Record<Markers>
-  let userMarker = null;
+  let userMarker: google.maps.Marker | null = null;
   let map: google.maps.Map | null = null;
   onMount(() => {
     async function initMap(): Promise<void> {
@@ -46,7 +46,7 @@
       )) as google.maps.MapsLibrary;
 
       map = new Map(document.getElementById("map") as HTMLElement, {
-        center: { lat: 46.397861557376075, lng: 6.926938859088941 },
+        center: startCoords,
         zoom: 14,
         disableDefaultUI: true,
         styles: styles["default"],
@@ -68,7 +68,7 @@
 
       // add user location marker
       userMarker = new google.maps.Marker({
-        position: { lat: 46.398397265692246, lng: 6.926791974586442 },
+        position: startCoords,
         icon: icons["user"].icon,
         map: map,
       });
@@ -78,23 +78,39 @@
   });
 
   // TODO: trigger when location selected
-  const goTo = () => {
-    const start = { lat: 46.398397265692246, lng: 6.926791974586442 };
-    const end = { lng: 6.918112, lat: 46.394107 };
+  export const goTo = async (id: number) => {
+    const { encoding } = (await google.maps.importLibrary(
+      "geometry"
+    )) as google.maps.GeometryLibrary;
+    const start = userMarker ? userMarker.getPosition()?.toJSON() : startCoords;
+    const marker = markers[id];
+    const end = { lat: marker.lat, lng: marker.lng };
     api.post(start, end).then((response) => {
-      console.log(response.routes[0].polyline.encodedPolyline);
       const path = encoding.decodePath(
         response.routes[0].polyline.encodedPolyline
       );
-      const pathPoly = new google.maps.Polyline({
-        path: path,
-        geodesic: true,
-        strokeColor: "#FF0000",
-        strokeOpacity: 1.0,
-        strokeWeight: 2,
-      });
-      pathPoly.setMap(map);
+      if (polyline == undefined) {
+        polyline = new google.maps.Polyline({
+          path: path,
+          geodesic: true,
+          strokeColor: "#FF0000",
+          strokeOpacity: 1.0,
+          strokeWeight: 2,
+        });
+        polyline.setMap(map);
+      } else {
+        polyline.setPath(path);
+      }
     });
+  };
+
+  export const moveUser = () => {
+    if (polyline != undefined) {
+      let path = polyline.getPath();
+      path.removeAt(0);
+      polyline.setPath(path);
+      userMarker?.setPosition(path.getAt(0));
+    }
   };
 </script>
 

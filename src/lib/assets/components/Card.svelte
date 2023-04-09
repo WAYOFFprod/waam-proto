@@ -75,6 +75,10 @@
   const drag = (e: any) => {
     console.log(e);
   };
+
+  const select = () => {
+    dispatch("selectMarker");
+  };
 </script>
 
 <!-- {#if marker.image != null} -->
@@ -108,9 +112,12 @@
     <span class="grow inline-block align-middle">
       {marker.title}
     </span>
-    <div class="rounded-full bg-pink-500 p-4 aspect-square">
+    <button
+      on:click={select}
+      class="rounded-full bg-pink-500 p-4 aspect-square"
+    >
       <Path />
-    </div>
+    </button>
   </h2>
   <div bind:this={wrapper} class="relative rounded-2xl overflow-hidden mx-4">
     <div

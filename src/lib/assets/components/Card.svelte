@@ -97,7 +97,7 @@
   on:wheel={scroll}
   bind:this={card}
   id="card"
-  class="absolute transition-all bg-white min-h-screen rounded-t-3xl"
+  class="absolute transition-all bg-white min-h-screen rounded-t-3xl z-20"
 >
   <div
     on:drag={drag}

@@ -1,8 +1,9 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from "svelte";
+  import { MarkerClusterer } from "@googlemaps/markerclusterer";
   import Api from "../utils/api";
 
-  export let markers: any = [];
+  export let points: any = [];
 
   let polyline: undefined | google.maps.Polyline;
 
@@ -53,17 +54,19 @@
       });
 
       // add points
-      for (let i = 0; i < markers.length; i++) {
-        const marker = markers[i];
+      let markers = [];
+      for (let i = 0; i < points.length; i++) {
+        const marker = points[i];
         const m = new google.maps.Marker({
           position: { lat: marker.lat, lng: marker.lng },
           icon: icons["point"].icon,
-          map: map,
+          // map: map,
         });
         m.set("dataId", i);
         m.addListener("click", () => {
           dispatch("selectMarker", { id: i });
         });
+        markers.push(m);
       }
 
       // add user location marker
@@ -72,6 +75,8 @@
         icon: icons["user"].icon,
         map: map,
       });
+
+      new MarkerClusterer({ markers, map });
     }
 
     initMap();
@@ -83,7 +88,7 @@
       "geometry"
     )) as google.maps.GeometryLibrary;
     const start = userMarker ? userMarker.getPosition()?.toJSON() : startCoords;
-    const marker = markers[id];
+    const marker = points[id];
     const end = { lat: marker.lat, lng: marker.lng };
     api.post(start, end).then((response) => {
       const path = encoding.decodePath(

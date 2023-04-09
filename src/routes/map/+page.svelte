@@ -3,7 +3,7 @@
 
   import Map from "$lib/assets/components/Map.svelte";
   import Card from "$lib/assets/components/Card.svelte";
-  import markers from "$lib/data/points.json";
+  import points from "$lib/data/points.json";
   import Overlay from "lib//assets/components/Overlay.svelte";
 
   let selectedMarker = null;
@@ -36,7 +36,7 @@
   <Overlay on:moveUser={moveUser} />
   <Map
     bind:goTo={onGoTo}
-    {markers}
+    {points}
     on:selectMarker={selectMarker}
     bind:moveUser={onMoveUser}
   />

@@ -87,7 +87,7 @@
   bind:this={image}
   class="absolute bg-cover bg-center top-0 bottom-0 left-0 right-0"
 >
-  <button class="p-4" on:click={back}>
+  <button class="rounded-full bg-white/50 m-1 p-4" on:click={back}>
     <Back />
   </button>
 </div>

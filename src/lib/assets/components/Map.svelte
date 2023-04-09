@@ -40,6 +40,15 @@
         user: {
           icon: iconBase + "user.svg",
         },
+        nature: {
+          icon: iconBase + "globe.svg",
+        },
+        building: {
+          icon: iconBase + "library.svg",
+        },
+        art: {
+          icon: iconBase + "art.svg",
+        },
       };
       //@ts-ignore
       const { Map } = (await google.maps.importLibrary(
@@ -59,7 +68,7 @@
         const marker = points[i];
         const m = new google.maps.Marker({
           position: { lat: marker.lat, lng: marker.lng },
-          icon: icons["point"].icon,
+          icon: icons[marker.type].icon,
           // map: map,
         });
         m.set("dataId", i);

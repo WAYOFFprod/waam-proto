@@ -12,7 +12,7 @@
   let onMoveUser;
 
   const selectMarker = (event: any) => {
-    selectedMarker = markers[event.detail.id];
+    selectedMarker = points[event.detail.id];
     selectedMarkerId = event.detail.id;
   };
 

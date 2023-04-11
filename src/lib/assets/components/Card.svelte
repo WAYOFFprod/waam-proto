@@ -46,7 +46,6 @@
       duration: 300,
       easing: "linear",
     });
-    console.log("onMount", marker);
   });
 
   const toggle = () => {

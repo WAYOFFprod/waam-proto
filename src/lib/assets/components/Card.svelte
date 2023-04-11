@@ -12,6 +12,8 @@
   let wrapper: HTMLElement;
   let image: HTMLElement;
 
+  export let displayStatus: any = {};
+
   export let marker: any = {};
 
   let isOpen = false;
@@ -44,6 +46,7 @@
       duration: 300,
       easing: "linear",
     });
+    console.log("onMount", marker);
   });
 
   const toggle = () => {
@@ -135,7 +138,7 @@
             {value}
           </p>
         {/each}
-        {#if marker.cta}
+        {#if marker.cta && displayStatus.buttonActive}
           <button class="rounded-full bg-blue-500 px-4 py-2 w-full mb-4"
             >{marker.cta}</button
           >

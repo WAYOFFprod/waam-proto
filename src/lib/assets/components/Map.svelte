@@ -121,10 +121,47 @@
   export const moveUser = () => {
     if (polyline != undefined) {
       let path = polyline.getPath();
+      const start = path.getAt(1);
+      const end = path.getAt(path.getLength() - 1);
+      if (start == null || end == null) {
+        return;
+      }
       path.removeAt(0);
       polyline.setPath(path);
       userMarker?.setPosition(path.getAt(0));
+      const dist = getDistanceFromLatLonInKm(start, end);
+      dispatch("displayActions", { isActive: dist < 0.2 });
     }
+  };
+
+  const getDistanceFromLatLonInKm = (
+    start: google.maps.LatLng,
+    end: google.maps.LatLng
+  ) => {
+    if (start == null || end == null) {
+      return 1000;
+    }
+    const lat1 = start.lat();
+    const lng1 = start.lng();
+    const lat2 = end.lat();
+    const lng2 = end.lng();
+
+    var R = 6371; // Radius of the earth in km
+    var distLat = deg2rad(lat2 - lat1); // deg2rad below
+    var distLng = deg2rad(lng2 - lng1);
+    var a =
+      Math.sin(distLat / 2) * Math.sin(distLat / 2) +
+      Math.cos(deg2rad(lat1)) *
+        Math.cos(deg2rad(lat2)) *
+        Math.sin(distLng / 2) *
+        Math.sin(distLng / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = R * c; // Distance in km
+    return d;
+  };
+
+  const deg2rad = (deg: number) => {
+    return deg * (Math.PI / 180);
   };
 </script>
 

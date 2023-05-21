@@ -41,13 +41,16 @@
           icon: iconBase + "user.svg",
         },
         nature: {
-          icon: iconBase + "globe.svg",
+          icon: iconBase + "nature.png",
         },
-        building: {
-          icon: iconBase + "library.svg",
+        monument: {
+          icon: iconBase + "monument.png",
         },
         art: {
-          icon: iconBase + "art.svg",
+          icon: iconBase + "art.png",
+        },
+        temporelle: {
+          icon: iconBase + "temporelle.png",
         },
       };
       //@ts-ignore

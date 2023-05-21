@@ -156,7 +156,7 @@
             <div class="">
               {#each contents as { type, value }}
                 {#if type == "text"}
-                  <p class="p-0 m-0">{value}</p>
+                  <p class="p-0 m-0">{@html value}</p>
                 {:else if type == "image"}
                   <img alt="alt text" src="/images/{value}" />
                 {/if}
@@ -178,5 +178,8 @@
   }
   #scroll-view {
     height: var(--containerheight);
+  }
+  .italic {
+    @apply italic;
   }
 </style>

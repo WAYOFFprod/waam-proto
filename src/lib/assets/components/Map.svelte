@@ -6,6 +6,7 @@
 
   export let points: any = [];
 
+  let cluster: MarkerClusterer;
   let radius: google.maps.Circle;
   let markers: google.maps.Marker[] = [];
   let userMarker: google.maps.Marker | null = null;
@@ -18,7 +19,7 @@
     }
     if (value == 4) {
       map?.setZoom(14);
-      new MarkerClusterer({ markers, map });
+      cluster.addMarkers(markers);
       radius.setMap(null);
     }
   });
@@ -78,6 +79,9 @@
         disableDefaultUI: true,
         styles: styles["default"],
       });
+
+      // create cluster before markers
+      cluster = new MarkerClusterer({ markers, map });
 
       // add points
       markers = [];

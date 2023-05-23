@@ -28,7 +28,7 @@
         "contents":[
           {
             "type": "text",
-            "value": "En tant que mélomane, je trouve que la création de ce centre musical est une initiative exceptionnelle. Cela montre l'engagement de la Fondation Waddilove envers la musique et sa volonté de la partager avec le plus grand nombre. Je suis impatient de visiter ce <span class= 'italic'>centre musical</span> et d'écouter Jazz over smoky water du trio \"Journée Helvète\"."
+            "value": "En tant que mélomane, je trouve que la création de ce centre musical est une initiative exceptionnelle. Cela montre l'engagement de la Fondation Waddilove envers la musique et sa volonté de la partager avec le plus grand nombre. Je suis impatient de visiter ce <span class='italic'>centre musical</span> et d'écouter Jazz over smoky water du trio \"Journée Helvète\"."
           }
         ]
       },
@@ -833,7 +833,7 @@
             "value": "J'aime bien les formes. Un jour, j'ai sonné à la porte parce que WAAM m'a rendue curieuse. Je leur ai expliqué le concept et la source de ma curiosité : WAAM. Ils étaient très fiers d'être ainsi mis en avant et m'ont invitée à faire un tour à l'intérieur. Ils vont télécharger eux-mêmes l'application pour avoir plus d'informations à ce sujet et découvrir également ce qui les intéresse à travers les prestations de WAAM."
           },
           {
-            "type": "imgae",
+            "type": "image",
             "value": "IMG_4239.jpg"
           }
         ]

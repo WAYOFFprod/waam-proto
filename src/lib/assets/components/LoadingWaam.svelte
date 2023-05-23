@@ -92,17 +92,19 @@
     </button>
     <div
       id="notice"
-      class="bg-white rounded-3xl p-16 sm:p-8 gap-8 text-2xl flex flex-col justify-around h-96 max-w-md drop-shadow-3xl-center {step ==
+      class="flex flex-col justify-around p-16 sm:p-8 gap-8 h-96 max-w-md drop-shadow-3xl-center {step ==
       1
         ? 'block'
         : 'hidden'}"
     >
-      <div>
-        <p>Ce prototype vous présente une selections d’exemples concrets:</p>
-        <p>Imaginez-vous à la gare de Villeneuve-VD, 6 000 habitants.</p>
+      <div class="p-8 bg-time/50 rounded-3xl text-xl text-white">
+        <p>
+          Ce prototype vous présente une selections de plusieurs exemples
+          concrets:
+        </p>
       </div>
       <button
-        class="rounded-full bg-black text-white px-8 py-4"
+        class="rounded-full bg-time text-white text-2xl px-8 py-4"
         on:click={loadMap}>Ok</button
       >
     </div>

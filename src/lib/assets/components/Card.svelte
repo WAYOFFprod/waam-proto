@@ -81,6 +81,26 @@
   const select = () => {
     dispatch("selectMarker");
   };
+
+  const getStyle = () => {
+    let val = "";
+
+    switch (marker.type) {
+      case "art":
+        val = "bg-art text-text-art";
+        break;
+      case "monument":
+        val = "bg-monument text-text-monument";
+        break;
+      case "temporelle":
+        val = "bg-time text-text-time";
+        break;
+      case "nature":
+        val = "bg-nature text-text-nature";
+        break;
+    }
+    return val;
+  };
 </script>
 
 <!-- {#if marker.image != null} -->
@@ -99,7 +119,7 @@
   on:wheel={scroll}
   bind:this={card}
   id="card"
-  class="absolute transition-all bg-white min-h-screen rounded-t-3xl z-20"
+  class="absolute transition-all min-h-screen rounded-t-3xl z-20 {getStyle()}"
 >
   <div
     on:drag={drag}
@@ -138,15 +158,16 @@
           </p>
         {/each}
         {#if marker.cta && displayStatus.buttonActive}
-          <button class="rounded-full bg-blue-500 px-4 py-2 w-full mb-4"
+          <button
+            class="rounded-full stroke-2 stroke-blue-500 px-4 py-2 w-full mb-4"
             >{marker.cta}</button
           >
         {/if}
         <div class="flex w-full gap-2 mb-4">
-          <button class="rounded-full bg-green-500 px-4 py-2 grow"
+          <button class="rounded-full stroke-2 stroke-green-500 px-4 py-2 grow"
             >Commenter</button
           >
-          <button class="rounded-full bg-red-500 px-4 py-2 grow"
+          <button class="rounded-full stroke-2 stroke-red-500 px-4 py-2 grow"
             >Dénoncer</button
           >
         </div>
@@ -180,6 +201,6 @@
     height: var(--containerheight);
   }
   .italic {
-    @apply italic;
+    font-style: italic;
   }
 </style>

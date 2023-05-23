@@ -1,11 +1,27 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from "svelte";
   import { MarkerClusterer } from "@googlemaps/markerclusterer";
+  import { stepNumber } from "lib//stores/TutorialStep";
   import Api from "../utils/api";
 
   export let points: any = [];
 
+  let radius: google.maps.Circle;
+  let markers: google.maps.Marker[] = [];
+  let userMarker: google.maps.Marker | null = null;
+  let map: google.maps.Map | null = null;
   let polyline: undefined | google.maps.Polyline;
+
+  stepNumber.subscribe((value) => {
+    if (value == 2) {
+      map?.setZoom(14);
+    }
+    if (value == 4) {
+      map?.setZoom(14);
+      new MarkerClusterer({ markers, map });
+      radius.setMap(null);
+    }
+  });
 
   const api = Api.getInstance();
 
@@ -28,8 +44,6 @@
   };
 
   // const markers: Record<Markers>
-  let userMarker: google.maps.Marker | null = null;
-  let map: google.maps.Map | null = null;
   onMount(() => {
     async function initMap(): Promise<void> {
       const iconBase = "/markers/";
@@ -60,13 +74,13 @@
 
       map = new Map(document.getElementById("map") as HTMLElement, {
         center: startCoords,
-        zoom: 14,
+        zoom: 18,
         disableDefaultUI: true,
         styles: styles["default"],
       });
 
       // add points
-      let markers = [];
+      markers = [];
       for (let i = 0; i < points.length; i++) {
         const marker = points[i];
         const m = new google.maps.Marker({
@@ -86,9 +100,19 @@
         position: startCoords,
         icon: icons["user"].icon,
         map: map,
+        zIndex: 10,
       });
 
-      new MarkerClusterer({ markers, map });
+      radius = new google.maps.Circle({
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#FF0000",
+        fillOpacity: 0.05,
+        map,
+        center: startCoords,
+        radius: 1000,
+      });
     }
 
     initMap();

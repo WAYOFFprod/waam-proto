@@ -4,7 +4,8 @@
   import Map from "$lib/assets/components/Map.svelte";
   import Card from "$lib/assets/components/Card.svelte";
   import points from "$lib/data/points.json";
-  import Overlay from "lib//assets/components/Overlay.svelte";
+  import Overlay from "$lib/assets/components/Overlay.svelte";
+  import Tutorial from "$lib/assets/components/Tutorial.svelte";
 
   let selectedMarker = null;
   let selectedMarkerId = -1;
@@ -13,6 +14,7 @@
   };
   let onGoTo;
   let onMoveUser;
+  let tutorialComplete = false;
 
   const selectMarker = (event: any) => {
     selectedMarker = points[event.detail.id];
@@ -36,6 +38,10 @@
   const displayActions = (event: any) => {
     status = { buttonActive: event.detail.isActive };
   };
+
+  const tutorialCompleted = (event: any) => {
+    tutorialComplete = true;
+  };
 </script>
 
 <div class="absolute top-0 right-0 bottom-0 left-0 overflow-hidden">
@@ -54,5 +60,8 @@
       on:selectMarker={navigateTo}
       displayStatus={status}
     />
+  {/if}
+  {#if !tutorialComplete}
+    <Tutorial on:tutorialComplete={tutorialCompleted} />
   {/if}
 </div>

@@ -35,8 +35,8 @@
       class="flex flex-col justify-around gap-8 h-96 max-w-md drop-shadow-3xl-center w-full"
     >
       <div class="p-8 bg-time/50 rounded-3xl text-xl text-white">
-        <p>Imaginez-vous à la Gare de Villeneuve</p>
-        <p>6’000 habitants</p>
+        <p class="text-center">Imaginez-vous à la Gare de Villeneuve</p>
+        <p class="text-center mb-0">6’000 habitants</p>
       </div>
       <button
         class="rounded-full bg-time text-white text-2xl px-8 py-4"
@@ -48,10 +48,10 @@
       class="flex flex-col justify-between gap-8 h-full max-w-md drop-shadow-3xl-center w-full"
     >
       <div class="p-8 bg-time/50 rounded-3xl text-xl text-white text-center">
-        <p>Rayon de 1km:</p>
-        <p>> 20 min à pieds</p>
-        <p>surface totale:</p>
-        <p>3.14 km2</p>
+        <span class="block text-md">Rayon de 1km:</span>
+        <span class="block text-sm pb-4"> 20 min à pieds</span>
+        <span class="block text-md">surface totale:</span>
+        <span class="block text-sm">3.14 km2</span>
       </div>
       <button
         class="rounded-full bg-time text-white text-2xl px-8 py-4"
@@ -90,7 +90,7 @@
           </div>
           <div class="">
             <span class="block">Temporelle</span>
-            <span class="block text-xs">(Seulement jour même)</span>
+            <span class="block text-xs">(Visible 48h avant un spectacle)</span>
             <span class="block text-sm">(spectacle, micro-événement,…) </span>
           </div>
         </div>

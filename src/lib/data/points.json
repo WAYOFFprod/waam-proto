@@ -59,7 +59,7 @@
   {
     "title": "Observatoire d’oiseaux",
     "image": "pro natura.jpg",
-    "type": "nature",
+    "type": "pro-natura",
     "description": [
       {
         "type": "text",
@@ -1517,7 +1517,7 @@
   {
     "title": "Office du Tourisme",
     "image": "IMG_4572.jpg",
-    "type": "monument",
+    "type": "swiss-tourism",
     "description": [
       {
         "type": "text",

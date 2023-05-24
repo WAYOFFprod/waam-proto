@@ -98,9 +98,8 @@
         : 'hidden'}"
     >
       <div class="p-8 bg-time/50 rounded-3xl text-xl text-white">
-        <p>
-          Ce prototype vous présente une selections de plusieurs exemples
-          concrets:
+        <p class="text-center mb-0">
+          Ce prototype vous présente 68 exemples concrets
         </p>
       </div>
       <button

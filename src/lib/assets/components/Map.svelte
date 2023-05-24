@@ -19,8 +19,9 @@
     }
     if (value == 4) {
       map?.setZoom(14);
+      console.log("length", markers.length);
       cluster.addMarkers(markers);
-      radius.setMap(null);
+      // radius.setMap(null);
     }
   });
 
@@ -53,7 +54,7 @@
           icon: iconBase + "point.svg",
         },
         user: {
-          icon: iconBase + "user.svg",
+          icon: iconBase + "player.png",
         },
         nature: {
           icon: iconBase + "nature.png",
@@ -66,6 +67,12 @@
         },
         temporelle: {
           icon: iconBase + "temporelle.png",
+        },
+        "swiss-tourism": {
+          icon: iconBase + "swiss-tourisme.png",
+        },
+        "pro-natura": {
+          icon: iconBase + "pro-natura.png",
         },
       };
       //@ts-ignore

@@ -95,11 +95,36 @@
       case "temporelle":
         val = "bg-time text-text-time";
         break;
+      case "pro-natura":
+      case "nature":
+        val = "bg-nature text-text-nature";
+        break;
       case "nature":
         val = "bg-nature text-text-nature";
         break;
     }
     return val;
+  };
+
+  const getImage = (author: string) => {
+    const imageBase = "/images/";
+    let image = "";
+    switch (author) {
+      case "Lucas":
+        image = imageBase + "profile-lucas.jpg";
+        break;
+      case "Yann":
+        image = imageBase + "profile-yann.jpg";
+        break;
+      case "Sophie":
+        image = imageBase + "profile-sophie.jpg";
+        break;
+
+      default:
+        break;
+    }
+
+    return image;
   };
 </script>
 
@@ -141,7 +166,7 @@
       <Path />
     </button>
   </h2>
-  <div bind:this={wrapper} class="relative rounded-2xl overflow-hidden mx-4">
+  <div bind:this={wrapper} class="relative overflow-hidden">
     <div
       bind:this={shadowTop}
       class="absolute h-6 left-0 w-full top-0 bg-gradient-to-t from-white/0 to-black/30"
@@ -150,7 +175,7 @@
       bind:this={shadowBottom}
       class="absolute h-6 left-0 w-full bottom-0 bg-gradient-to-t from-black/30 to-white/0"
     />
-    <div id="scroll-view" bind:this={scrollView} class="overflow-scroll px-4">
+    <div id="scroll-view" bind:this={scrollView} class="overflow-scroll px-8">
       <div bind:this={content} class="">
         {#each marker.description as { value }}
           <p class="">
@@ -173,15 +198,27 @@
         </div>
         <h3>Commentaires</h3>
         <div class="flex flex-col gap-4 pt-4">
-          {#each marker.comments as { contents }}
-            <div class="">
-              {#each contents as { type, value }}
-                {#if type == "text"}
-                  <p class="p-0 m-0">{@html value}</p>
-                {:else if type == "image"}
-                  <img alt="alt text" src="/images/{value}" />
-                {/if}
-              {/each}
+          {#each marker.comments as { meta, contents }}
+            <div class="flex gap-2">
+              {#if meta.author != null}
+                <div class="w-1/5">
+                  <img
+                    class="rounded-full aspect-square"
+                    alt={meta.author}
+                    src={getImage(meta.author)}
+                  />
+                </div>
+              {/if}
+              <div class="w-4/5">
+                <p class="mb-2 font-bold">{meta.author}</p>
+                {#each contents as { type, value }}
+                  {#if type == "text"}
+                    <p class="p-0 m-0 pb-2">{@html value}</p>
+                  {:else if type == "image"}
+                    <img alt="alt text" src="/images/{value}" />
+                  {/if}
+                {/each}
+              </div>
             </div>
           {/each}
         </div>

@@ -32,15 +32,18 @@
   };
 
   const loadMap = () => {
+    const onCompleted = (anim: Animation) => {
+      console.log("tl complete");
+      // load next page
+      goto("/map");
+    };
+
     var tl = anime.timeline({
       easing: "easeOutExpo",
       duration: 1500,
-      complete: function (anim: Animation) {
-        console.log("tl complete");
-        // load next page
-        goto("/map");
-      },
+      complete: onCompleted,
     });
+
     tl.add({
       targets: "#notice",
       opacity: 0,
@@ -64,7 +67,7 @@
     });
     anime({
       targets: "#background-image",
-      translateX: -20,
+      translateX: 20,
       duration: 10000,
       loop: true,
       direction: "alternate",
@@ -76,7 +79,7 @@
 <div id="loading-page" class="relative overflow-hidden">
   <div
     id="background-image"
-    class="absolute top-0 right-0 bottom-0 left-0 bg-fit"
+    class="absolute top-0 right-0 bottom-0 left-0 bg-cover"
   />
   <div class="relative min-h-screen flex flex-col justify-center items-center">
     <button
@@ -97,13 +100,13 @@
         ? 'block'
         : 'hidden'}"
     >
-      <div class="p-8 bg-time/50 rounded-3xl text-xl text-white">
+      <div class="p-8 bg-nature/50 rounded-3xl text-xl text-white">
         <p class="text-center mb-0">
           Ce prototype vous présente 68 exemples concrets
         </p>
       </div>
       <button
-        class="rounded-full bg-time text-white text-2xl px-8 py-4"
+        class="rounded-full bg-nature text-white text-2xl px-8 py-4"
         on:click={loadMap}>Ok</button
       >
     </div>
@@ -115,8 +118,8 @@
     opacity: 0;
   }
   #background-image {
-    background-image: url($lib/assets/images/background.jpg);
-    scale: 1.2;
+    background-image: url($lib/assets/images/background.png);
+    scale: 1.3;
   }
   .logo-image {
     background-image: url($lib/assets/images/logo.jpg);

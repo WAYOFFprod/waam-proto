@@ -89,6 +89,7 @@
       case "art":
         val = "bg-art text-text-art";
         break;
+      case "swiss-tourism":
       case "monument":
         val = "bg-monument text-text-monument";
         break;

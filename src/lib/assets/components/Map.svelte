@@ -12,6 +12,7 @@
   let userMarker: google.maps.Marker | null = null;
   let map: google.maps.Map | null = null;
   let polyline: undefined | google.maps.Polyline;
+  let isUserMoving: boolean = false;
 
   stepNumber.subscribe((value) => {
     if (value == 2) {
@@ -156,7 +157,18 @@
     });
   };
 
+  let interval: ReturnType<typeof setInterval>;
   export const moveUser = () => {
+    if (isUserMoving) {
+      clearInterval(interval);
+      isUserMoving = false;
+    } else {
+      isUserMoving = true;
+      interval = setInterval(() => movePoint(), 500);
+    }
+  };
+
+  const movePoint = () => {
     if (polyline != undefined) {
       let path = polyline.getPath();
       const start = path.getAt(1);
@@ -169,6 +181,8 @@
       userMarker?.setPosition(path.getAt(0));
       const dist = getDistanceFromLatLonInKm(start, end);
       dispatch("displayActions", { isActive: dist < 0.2 });
+    } else {
+      clearInterval(interval);
     }
   };
 

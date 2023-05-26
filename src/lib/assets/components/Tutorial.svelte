@@ -34,12 +34,12 @@
     <div
       class="flex flex-col justify-around gap-8 h-96 max-w-md drop-shadow-3xl-center w-full"
     >
-      <div class="p-8 bg-time/50 rounded-3xl text-xl text-white">
+      <div class="p-8 bg-nature/50 rounded-3xl text-xl text-white">
         <p class="text-center">Imaginez-vous à la Gare de Villeneuve</p>
         <p class="text-center mb-0">6’000 habitants</p>
       </div>
       <button
-        class="rounded-full bg-time text-white text-2xl px-8 py-4"
+        class="rounded-full bg-nature text-white text-2xl px-8 py-4"
         on:click={nextStep}>Ok</button
       >
     </div>
@@ -47,14 +47,14 @@
     <div
       class="flex flex-col justify-between gap-8 h-full max-w-md drop-shadow-3xl-center w-full"
     >
-      <div class="p-8 bg-time/50 rounded-3xl text-xl text-white text-center">
+      <div class="p-8 bg-nature/50 rounded-3xl text-xl text-white text-center">
         <span class="block text-md">Rayon de 1km:</span>
         <span class="block text-sm pb-4"> 20 min à pieds</span>
         <span class="block text-md">surface totale:</span>
         <span class="block text-sm">3.14 km2</span>
       </div>
       <button
-        class="rounded-full bg-time text-white text-2xl px-8 py-4"
+        class="rounded-full bg-nature text-white text-2xl px-8 py-4"
         on:click={nextStep}>Ok</button
       >
     </div>
@@ -63,7 +63,7 @@
       class="flex flex-col justify-around gap-8 h-96 max-w-md drop-shadow-3xl-center w-full"
     >
       <div
-        class="p-8 bg-time/50 rounded-3xl text-xl text-white flex flex-col gap-8"
+        class="p-8 bg-nature/50 rounded-3xl text-xl text-white flex flex-col gap-8"
       >
         <h2 class="text-white text-2xl text-center">4 catégories</h2>
         <div class="flex flex-row gap-4">
@@ -106,7 +106,7 @@
         </div>
       </div>
       <button
-        class="rounded-full bg-time text-white text-2xl px-8 py-4"
+        class="rounded-full bg-nature text-white text-2xl px-8 py-4"
         on:click={nextStep}>Ok</button
       >
     </div>

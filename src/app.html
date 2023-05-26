@@ -6,9 +6,23 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover" class="min-h-screen">
-		<div style="display: contents">
+	<body data-sveltekit-preload-data="hover" class="min-h-screen w-full">
+		<div class="mainwrapper" style="display: contents">
 			%sveltekit.body%
 		</div>
 	</body>
 </html>
+
+<style>
+	html,
+  body {
+    position: fixed;
+    overflow: hidden;
+  }
+  body .mainwrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /* enables “momentum” (smooth) scrolling */
+  }
+</style>

@@ -112,7 +112,7 @@
         position: startCoords,
         icon: icons["user"].icon,
         map: map,
-        zIndex: 10,
+        zIndex: 1000,
       });
 
       radius = new google.maps.Circle({

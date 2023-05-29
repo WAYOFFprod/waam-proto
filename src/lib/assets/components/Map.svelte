@@ -164,7 +164,7 @@
       isUserMoving = false;
     } else {
       isUserMoving = true;
-      interval = setInterval(() => movePoint(), 500);
+      interval = setInterval(() => movePoint(), 250);
     }
   };
 

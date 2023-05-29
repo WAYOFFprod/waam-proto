@@ -160,10 +160,7 @@
     <span class="grow inline-block align-middle">
       {marker.title}
     </span>
-    <button
-      on:click={select}
-      class="rounded-full bg-pink-500 p-4 aspect-square"
-    >
+    <button on:click={select} class="rounded-full p-4 aspect-square">
       <Path />
     </button>
   </h2>
@@ -185,24 +182,26 @@
         {/each}
         {#if marker.cta && displayStatus.buttonActive}
           <button
-            class="rounded-full stroke-2 stroke-blue-500 px-4 py-2 w-full mb-4"
+            class="rounded-full outline outline-2 outline-blue-500 px-4 py-2 w-full mb-4"
             >{marker.cta}</button
           >
         {/if}
         <div class="flex w-full gap-2 mb-4">
-          <button class="rounded-full stroke-2 stroke-green-500 px-4 py-2 grow"
+          <button
+            class="rounded-full outline outline-2 outline-green-500 px-4 py-2 grow"
             >Commenter</button
           >
-          <button class="rounded-full stroke-2 stroke-red-500 px-4 py-2 grow"
+          <button
+            class="rounded-full outline outline-2 outline-red-500 px-4 py-2 grow"
             >Dénoncer</button
           >
         </div>
         <h3>Commentaires</h3>
         <div class="flex flex-col gap-4 pt-4">
           {#each marker.comments as { meta, contents }}
-            <div class="flex gap-2">
+            <div class="flex">
               {#if meta.author != null}
-                <div class="w-1/5">
+                <div class="w-1/5 -ml-4 mr-4">
                   <img
                     class="rounded-full aspect-square"
                     alt={meta.author}
@@ -217,6 +216,12 @@
                     <p class="p-0 m-0 pb-2">{@html value}</p>
                   {:else if type == "image"}
                     <img alt="alt text" src="/images/{value}" />
+                  {:else if type == "donation"}
+                    <p
+                      class="outline outline-2 outline-red-100 rounded-full px-4 py-2 m-2"
+                    >
+                      {value}
+                    </p>
                   {/if}
                 {/each}
               </div>

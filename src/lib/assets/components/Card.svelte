@@ -169,7 +169,7 @@
   on:wheel={scroll}
   bind:this={card}
   id="card"
-  class="top-0 absolute transition-all min-h-screen rounded-t-3xl z-20 {getStyle()}"
+  class="top-0 absolute min-h-screen rounded-t-3xl z-20 {getStyle()}"
 >
   <div
     on:dragstart={handleDragStart}

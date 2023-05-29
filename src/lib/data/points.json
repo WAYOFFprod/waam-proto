@@ -89,6 +89,10 @@
             "value": "Je suis émerveillé par la beauté de la nature dans cet endroit préservé. La Fondation des Grangettes fait un travail formidable pour maintenir l'écosystème en équilibre. Les oiseaux sont nombreux et c'est un réel plaisir de les observer dans leur habitat naturel. Je recommande cette visite à tous les amoureux de la nature !"
           },
           {
+            "type": "image",
+            "value": "IMG_4291.jpg"
+          },
+          {
             "type": "donation",
             "value": "donation 20.-"
           }
@@ -166,7 +170,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4760.jpg"
+            "value": "IMG_4312.jpg"
           }
         ]
       },
@@ -185,7 +189,7 @@
           },
           {
             "type": "image",
-            "value": "compteur 1.jpg"
+            "value": "conteur 1.jpg"
           }
         ]
       },
@@ -204,7 +208,7 @@
           },
           {
             "type": "image",
-            "value": "compteur 2.jpg"
+            "value": "conteur 2.jpg"
           }
         ]
       }
@@ -261,7 +265,7 @@
           },
           {
             "type": "image",
-            "value": "chromatix comm"
+            "value": "chromatix comm.jpg"
           }
         ]
       },
@@ -369,7 +373,7 @@
   },
   {
     "title": "Église Saint-Paul",
-    "image": "église saint paul 1.jpg",
+    "image": "eglise saint paul 1.jpg",
     "type": "monument",
     "description": [
       {
@@ -768,7 +772,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_5608.jpg"
+            "value": "IMG_5608.jpeg"
           }
         ]
       },
@@ -1092,7 +1096,7 @@
   },
   {
     "title": "Acro Show",
-    "image": "acroshow2017-nicolas-assael-ld-3037.jpg.jpg",
+    "image": "acroshow2017-nicolas-assael-ld-3037.jpg",
     "type": "temporelle",
     "description": [
       {
@@ -1297,6 +1301,10 @@
           {
             "type": "image",
             "value": "IMG_4626.jpg"
+          },
+          {
+            "type": "image",
+            "value": "IMG_4625.jpg"
           }
         ]
       },
@@ -1311,7 +1319,7 @@
           },
           {
             "type": "image",
-            "value": "00_Screenshot 2023-04-25 at 18.34.41"
+            "value": "son.jpg"
           }
         ]
       }
@@ -1413,7 +1421,7 @@
           },
           {
             "type": "image",
-            "value": "Screenshot 2023-04-20 at 13.52.37"
+            "value": "Screenshot 2023-04-20 at 13.52.37.jpg"
           }
         ]
       },
@@ -1508,7 +1516,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4613"
+            "value": "IMG_4613.jpg"
           }
         ]
       }
@@ -1629,7 +1637,7 @@
           },
           {
             "type":"image",
-            "value": "IMG_4264.jpg"
+            "value": "IMG_4762.jpg"
           }
         ]
       },
@@ -1663,7 +1671,7 @@
           },
           {
             "type": "image",
-            "value": "00_Screenshot 2023-04-25 at 18.34.41"
+            "value": "IMG_4761.jpg"
           }
         ]
       }
@@ -1671,7 +1679,7 @@
   },
   {
     "title": "Marche des hameaux",
-    "image": "Screenshot 2023-04-20 at 16.10.38",
+    "image": "Screenshot 2023-04-20 at 16.10.38.jpg",
     "type": "nature",
     "description": [
       {
@@ -1748,7 +1756,7 @@
   },
   {
     "title": "Le sentier des Vignes",
-    "image": "Screenshot 2023-04-20 at 16.32.05",
+    "image": "Screenshot 2023-04-20 at 16.32.05.jpg",
     "type": "nature",
     "description": [
       {
@@ -1783,7 +1791,7 @@
           },
           {
             "type":"image",
-            "value": "Screenshot 2023-04-20 at 16.33.19"
+            "value": "Screenshot 2023-04-20 at 16.33.19.jpg"
           }
         ]
       },
@@ -1802,7 +1810,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4710"
+            "value": "IMG_4710.jpg"
           }
         ]
       },
@@ -1821,7 +1829,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4708"
+            "value": "IMG_4708.jpg"
           }
         ]
       }
@@ -1829,7 +1837,7 @@
   },
   {
     "title": "Balade au Royaume des Châtaigniers",
-    "image": "Screenshot 2023-04-20 at 16.40.26",
+    "image": "Screenshot 2023-04-20 at 16.40.26.jpg",
     "type": "nature",
     "description": [
       {
@@ -1841,8 +1849,8 @@
         "value": "Cette randonnée en boucle de 7 km sur le territoire du Parc Naturel Régional Gruyère Pays d’Enhaut vous fera grimper au travers de vignes et de forêts en passant par les châtaigneraies de Chenaux et Mont-olivet. Sur le parcours, une petite grotte paléolithique, 231 marches d’escaliers, une chapelle accrochée au coteau complètent l’originalité des lieux et offrent une vue magnifique sur lac et les Alpes."
       }
     ],
-    "lng": 6.928206234854632,
-    "lat": 46.398045457386175,
+    "lng": 6.931004505299842,
+    "lat": 46.399180716763674,
     "cta": "faire une donation",
     "requiredTime": "3heures",
     "renew": "trimestriel",
@@ -1864,7 +1872,7 @@
           },
           {
             "type":"image",
-            "value": "Châtaignes_dans_leurs_bogues_sur_la_branche_d'un_châtaignier"
+            "value": "Châtaignes_dans_leurs_bogues_sur_la_branche_d'un_châtaignier.jpg"
           }
         ]
       },
@@ -1898,7 +1906,7 @@
           },
           {
             "type": "image",
-            "value": "00_Screenshot 2023-04-25 at 18.34.41.jpg"
+            "value": "son.jpeg"
           }
         ]
       }
@@ -1941,7 +1949,7 @@
           },
           {
             "type": "image",
-            "value": "00_Screenshot 2023-04-25 at 18.34.41"
+            "value": "00_video.jpg"
           }
         ]
       },
@@ -1975,7 +1983,7 @@
           },
           {
             "type": "image",
-            "value": "00_Screenshot 2023-04-25 at 18.34.41"
+            "value": "00_video.jpg"
           }
         ]
       }
@@ -1983,7 +1991,7 @@
   },
   {
     "title": "Marche des Grangettes",
-    "image": "Screenshot 2023-04-21 at 08.41.41",
+    "image": "Screenshot 2023-04-21 at 08.41.41.jpg",
     "type": "nature",
     "description": [
       {
@@ -2014,7 +2022,7 @@
           },
           {
             "type":"image",
-            "value": "Screenshot 2023-04-21 at 09.09.09"
+            "value": "Screenshot 2023-04-21 at 09.09.09.jpg"
           }
         ]
       },
@@ -2141,8 +2149,8 @@
         "value": "Une Boîte à Livres se trouve vers l’entrée de la garderie 1000 Pattes. Elle est complète et permet de beaux échanges de livres pour les grands, comme pour les petits. On y trouve des livres de littérature, d'histoire, ainsi que des livres pour enfants ou des livres d'école. S’il vous plait, n’oublier pas – si désiré – d’écrire votre prénom sur la deuxième de couverture, soigner les livres. Merci"
       }
     ],
-    "lng": 6.923623190371276,
-    "lat": 46.39215431770223,
+    "lng": 6.9282682975678345,
+    "lat": 46.39825556999711,
     "cta": "donation",
     "requiredTime": "7 minutes",
     "renew": "trimestrielle",
@@ -2168,7 +2176,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4570"
+            "value": "IMG_4570.jpg"
           }
         ]
       },
@@ -2187,7 +2195,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4568"
+            "value": "IMG_4568.jpg"
           }
         ]
       },
@@ -2650,7 +2658,7 @@
   },
   {
     "title": "Grand’Rue",
-    "image": "IMG_4687",
+    "image": "IMG_4687.jpg",
     "type": "monument",
     "description": [
       {
@@ -2686,7 +2694,7 @@
           },
           {
             "type": "image",
-            "value": "00_Screenshot 2023-04-25 at 18.34.41.jpg"
+            "value": "IMG_4766.jpg"
           }
         ]
       },
@@ -2721,6 +2729,9 @@
           {
             "type": "donation",
             "value": "donation 50.-"
+          }, {
+            "type":"image",
+            "value": "IMG_4674.jpg"
           }
         ]
       }
@@ -2903,7 +2914,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4639"
+            "value": "IMG_4639.jpg"
           }
         ]
       },
@@ -3053,7 +3064,7 @@
           },
           {
             "type": "image",
-            "value": "00_Screenshot 2023-04-25 at 18.34.41.jpg"
+            "value": "son.jpg"
           }
         ]
       },
@@ -3133,7 +3144,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4705"
+            "value": "IMG_4705.jpg"
           }
         ]
       },
@@ -3175,7 +3186,7 @@
   },
   {
     "title": "Escalade",
-    "image": "30_Topo_Villeneuve_27122012_1200x1200",
+    "image": "30_Topo_Villeneuve_27122012_1200x1200.jpg",
     "type": "nature",
     "description": [
       {
@@ -3229,7 +3240,7 @@
           },
           {
             "type": "image",
-            "value": "escalade.jpg"
+            "value": "escalade.jpeg"
           }
         ]
       },
@@ -3371,7 +3382,7 @@
           },
           {
             "type": "image",
-            "value": "IMG_4699"
+            "value": "IMG_4879.jpg"
           }
         ]
       },
@@ -3639,7 +3650,7 @@
           },
           {
             "type": "image",
-            "value": "00_video.jpg"
+            "value": "IMG_4813.jpg"
           }
         ]
       },
@@ -4023,7 +4034,7 @@
     ]
   },
   {
-    "title": "Jardin de sculture",
+    "title": "Jardin de sculpture",
     "image": "IMG_4495.jpg",
     "type": "art",
     "description": [
@@ -4059,7 +4070,7 @@
           },
           {
             "type": "image",
-            "value": "00_Screenshot 2023-04-25 at 18.34.41.jpg"
+            "value": "son.jpg"
           }
         ]
       },
@@ -4155,75 +4166,6 @@
           {
             "type": "text",
             "value": "Alstom est un exemple de réussite pour les entreprises suisses. En se concentrant sur l'expertise et la créativité, l'entreprise a su se démarquer dans un marché très concurrentiel et devenir un leader incontesté du secteur. Sa présence mondiale témoigne de sa capacité à s'adapter aux besoins des différents marchés. En continuant d'innover, Alstom est en bonne position pour maintenir son leadership dans l'industrie ferroviaire."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "VAgues",
-    "image": "Waves.webm",
-    "type": "art",
-    "description": [
-      {
-        "type": "text",
-        "value": "Inspirée par ses voyages en Afrique et ses sessions de surf, cette œuvre numérique d'une simplicité éblouissante transporte instantanément la chaleur et la sérénité d'un coucher de soleil sur la plage. Le must du must est de l’acheté une fois sur place et la contempler tout de suite puis depuis votre canapé puis dans plein d’autre moment, de ce laisser a chaque fois vers ce même univers tranquil ! Ne manquez pas cette pièce unique en son genre !"
-      }
-    ],
-    "lng": 6.930006899848336,
-    "lat": 46.39092036816848,
-    "cta": "achat 5.-",
-    "requiredTime": "5 minutes",
-    "renew": "mensuelle",
-    "frequency": "/",
-    "relations": [
-      "Tribaux Tranquille",
-      "Connection",
-      "Fondation Waddilove"
-    ],
-    "comments": [
-      {
-        "meta": {
-          "author": "Lucas"
-        },
-        "contents":[
-          {
-            "type": "text",
-            "value": "Je suis absolument ébloui par l'œuvre d'Olivier Schuppisser. Elle reflète tellement bien la sensation de calme et de sérénité que l'on peut ressentir lors d'un coucher de soleil sur la plage. En tant qu'amateur et acheteur d'art numérique et NFT, je peux vous dire que c'est une pièce exceptionnelle que je serais fier de posséder."
-          },
-          {
-            "type": "image",
-            "value": "Waves.jpg"
-          }
-        ]
-      },
-      {
-        "meta":{
-          "author": "Yann"
-        },
-        "contents":[
-          {
-            "type": "text",
-            "value": "Cette œuvre est totalement incroyable ! J'adore l'idée de pouvoir ramener une partie de la nature dans mon chez moi grâce à l'art numérique. Et en plus, c'est super pratique de pouvoir l'acheter et la visionner depuis mon ordinateur. Olivier Schuppisser est un vrai artiste !"
-          },
-          {
-            "type": "image",
-            "value": "son.jpg"
-          }
-        ]
-      },
-      {
-        "meta":{
-          "author": "Sophie"
-        },
-        "contents":[
-          {
-            "type": "text",
-            "value": "Mon enfant est absolument fan de cette œuvre ! Il a été fasciné par les couleurs vives et la sensation de calme qui s'en dégage. Et le fait qu'on puisse la visionner de chez nous a été un vrai plus, car il a pu la regarder encore et encore. Merci à Olivier Schuppisser pour avoir créé une œuvre qui a su captiver l'attention de mon enfant !"
-          },
-          {
-            "type": "image",
-            "value": "kid 1.jpg"
           }
         ]
       }

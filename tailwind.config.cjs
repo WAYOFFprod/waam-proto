@@ -36,6 +36,8 @@ module.exports = {
 				'text-nature': '#648FDE',
 				time: '#C476FF',
 				'text-time': '#FFD600',
+				tourism: '#D9202C',
+				'text-tourisme': '#D7EAB2'
 			},
 			fontFamily: {
 				'sans': ['Roboto Condensed', 'Arial', 'sans-serif'],

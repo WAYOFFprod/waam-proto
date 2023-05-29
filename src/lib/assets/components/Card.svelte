@@ -112,6 +112,8 @@
         val = "bg-art text-text-art";
         break;
       case "swiss-tourism":
+        val = "bg-tourism text-text-tourism";
+        break;
       case "monument":
         val = "bg-monument text-text-monument";
         break;
@@ -199,7 +201,11 @@
       bind:this={shadowBottom}
       class="absolute h-6 left-0 w-full bottom-0 bg-gradient-to-t from-black/30 to-white/0"
     />
-    <div id="scroll-view" bind:this={scrollView} class="overflow-scroll px-8">
+    <div
+      id="scroll-view"
+      bind:this={scrollView}
+      class="overflow-scroll px-8 pb-4"
+    >
       <div bind:this={content} class="">
         {#each marker.description as { value }}
           <p class="">
@@ -244,7 +250,7 @@
                     <img alt="alt text" src="/images/{value}" />
                   {:else if type == "donation"}
                     <p
-                      class="outline outline-2 outline-red-100 rounded-full px-4 py-2 m-2"
+                      class="outline outline-2 outline-red-100 rounded-full px-4 py-2 my-4"
                     >
                       {value}
                     </p>

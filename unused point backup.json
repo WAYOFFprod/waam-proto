@@ -1,0 +1,70 @@
+,
+  {
+    "title": "VAgues",
+    "image": "Waves.webm",
+    "type": "art",
+    "description": [
+      {
+        "type": "text",
+        "value": "Inspirée par ses voyages en Afrique et ses sessions de surf, cette œuvre numérique d'une simplicité éblouissante transporte instantanément la chaleur et la sérénité d'un coucher de soleil sur la plage. Le must du must est de l’acheté une fois sur place et la contempler tout de suite puis depuis votre canapé puis dans plein d’autre moment, de ce laisser a chaque fois vers ce même univers tranquil ! Ne manquez pas cette pièce unique en son genre !"
+      }
+    ],
+    "lng": 6.930006899848336,
+    "lat": 46.39092036816848,
+    "cta": "achat 5.-",
+    "requiredTime": "5 minutes",
+    "renew": "mensuelle",
+    "frequency": "/",
+    "relations": [
+      "Tribaux Tranquille",
+      "Connection",
+      "Fondation Waddilove"
+    ],
+    "comments": [
+      {
+        "meta": {
+          "author": "Lucas"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Je suis absolument ébloui par l'œuvre d'Olivier Schuppisser. Elle reflète tellement bien la sensation de calme et de sérénité que l'on peut ressentir lors d'un coucher de soleil sur la plage. En tant qu'amateur et acheteur d'art numérique et NFT, je peux vous dire que c'est une pièce exceptionnelle que je serais fier de posséder."
+          },
+          {
+            "type": "image",
+            "value": "Waves.jpg"
+          }
+        ]
+      },
+      {
+        "meta":{
+          "author": "Yann"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Cette œuvre est totalement incroyable ! J'adore l'idée de pouvoir ramener une partie de la nature dans mon chez moi grâce à l'art numérique. Et en plus, c'est super pratique de pouvoir l'acheter et la visionner depuis mon ordinateur. Olivier Schuppisser est un vrai artiste !"
+          },
+          {
+            "type": "image",
+            "value": "son.jpg"
+          }
+        ]
+      },
+      {
+        "meta":{
+          "author": "Sophie"
+        },
+        "contents":[
+          {
+            "type": "text",
+            "value": "Mon enfant est absolument fan de cette œuvre ! Il a été fasciné par les couleurs vives et la sensation de calme qui s'en dégage. Et le fait qu'on puisse la visionner de chez nous a été un vrai plus, car il a pu la regarder encore et encore. Merci à Olivier Schuppisser pour avoir créé une œuvre qui a su captiver l'attention de mon enfant !"
+          },
+          {
+            "type": "image",
+            "value": "kid 1.jpg"
+          }
+        ]
+      }
+    ]
+  },

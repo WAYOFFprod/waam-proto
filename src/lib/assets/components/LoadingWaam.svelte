@@ -102,7 +102,7 @@
     >
       <div class="p-8 bg-nature/50 rounded-3xl text-xl text-white">
         <p class="text-center mb-0">
-          Ce prototype vous présente 68 exemples concrets
+          Ceci est un prototype et ne représente donc pas le produit fini
         </p>
       </div>
       <button

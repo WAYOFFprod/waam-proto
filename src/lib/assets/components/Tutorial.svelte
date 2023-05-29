@@ -51,7 +51,9 @@
         <span class="block text-md">Rayon de 1km:</span>
         <span class="block text-sm pb-4"> 20 min à pieds</span>
         <span class="block text-md">surface totale:</span>
-        <span class="block text-sm">3.14 km2</span>
+        <span class="block text-sm pb-4">3.14 km2</span>
+        <span class="block text-md">nombre de point:</span>
+        <span class="block text-sm">68 exemples concret</span>
       </div>
       <button
         class="rounded-full bg-nature text-white text-2xl px-8 py-4"

@@ -50,13 +50,8 @@
     });
 
     // init scroll gradiant
-    if (content.scrollHeight > containerHeight) {
-      shadowTop.style.opacity = "0";
-      shadowBottom.style.opacity = "1";
-    } else {
-      shadowTop.style.opacity = "0";
-      shadowBottom.style.opacity = "0";
-    }
+    shadowTop.style.opacity = "0";
+    shadowBottom.style.opacity = "1";
   });
 
   const back = () => {

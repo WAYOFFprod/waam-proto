@@ -21,6 +21,7 @@
   const dispatch = createEventDispatcher();
 
   const scroll = (e: any) => {
+    console.log("something");
     // update shadow bottom and top based on scroll
     const contentScrollHeight = content.scrollHeight - scrollView.offsetHeight;
     var currentScroll = scrollView.scrollTop / contentScrollHeight;
@@ -29,14 +30,15 @@
   };
 
   onMount(async () => {
-    let height = -100;
-    scrollView.style.setProperty("--containerheight", height + "px");
-    anime({
-      targets: "#card",
-      translateY: height,
-      duration: 100,
-      easing: "easeOutExpo",
-    });
+    card.style.setProperty("--dragHeight", window.innerHeight - 100 + "px");
+
+    const height = window.innerHeight;
+    console.log(height);
+    scrollView.style.setProperty(
+      "--containerheight",
+      "calc(" + height + "px - 10.2rem)"
+    );
+
     // setup image
     image.style.backgroundImage = "url('/images/" + marker.image + "')";
     image.style.opacity = "0";
@@ -46,22 +48,8 @@
       duration: 300,
       easing: "linear",
     });
-  });
 
-  const toggle = () => {
-    isOpen = !isOpen;
-    const height = window.innerHeight;
-    let newHeight = isOpen ? -height + 60 : -100;
-    let containerHeight = height - 190;
-    scrollView.style.setProperty("--containerheight", containerHeight + "px");
-    anime({
-      targets: "#card",
-      translateY: newHeight,
-      duration: 400,
-      easing: "linear",
-    });
-
-    // initialize scroll gradients
+    // init scroll gradiant
     if (content.scrollHeight > containerHeight) {
       shadowTop.style.opacity = "0";
       shadowBottom.style.opacity = "1";
@@ -69,13 +57,52 @@
       shadowTop.style.opacity = "0";
       shadowBottom.style.opacity = "0";
     }
-  };
+  });
 
   const back = () => {
     dispatch("close");
   };
-  const drag = (e: any) => {
-    console.log(e);
+  const handleDragStart = (e: DragEvent) => {
+    console.log("drag start", e);
+  };
+
+  const handleDragEnd = (e: DragEvent) => {
+    console.log("drag end", e);
+  };
+
+  let handle: HTMLElement;
+  let touchEvent = "none";
+  let touchOffset = {
+    x: 0,
+    y: 0,
+  };
+
+  let topDist = 8;
+  const handleTouchStart = (e: TouchEvent) => {
+    touchEvent = "start";
+    touchOffset = {
+      x: e.changedTouches[0].pageX,
+      y: e.changedTouches[0].pageY,
+    };
+    topDist = 12;
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    card.style.setProperty("--dragHeight", e.changedTouches[0].pageY + "px");
+    touchEvent = "move";
+  };
+
+  const handleTouchEnd = (e: TouchEvent) => {
+    if (touchEvent === "move") {
+      // check if it is closer to top or bottom and animate to there
+      let height = window.innerHeight;
+      if (Math.round(e.changedTouches[0].pageY) > height / 2) {
+        card.style.setProperty("--dragHeight", "calc(" + height + "px - 6rem)");
+      } else {
+        card.style.setProperty("--dragHeight", "4rem");
+      }
+    }
+    touchEvent = "end";
   };
 
   const select = () => {
@@ -127,6 +154,8 @@
 
     return image;
   };
+
+  $: topDistance = "translate-y-[" + topDist + "rem]";
 </script>
 
 <!-- {#if marker.image != null} -->
@@ -145,18 +174,20 @@
   on:wheel={scroll}
   bind:this={card}
   id="card"
-  class="absolute transition-all min-h-screen rounded-t-3xl z-20 {getStyle()}"
+  class="top-0 absolute transition-all min-h-screen rounded-t-3xl z-20 {getStyle()}"
 >
   <div
-    on:drag={drag}
-    on:dragstart={drag}
-    on:click={toggle}
-    on:keydown={toggle}
+    on:dragstart={handleDragStart}
+    on:dragend={handleDragEnd}
+    on:touchstart={handleTouchStart}
+    on:touchmove={handleTouchMove}
+    on:touchend={handleTouchEnd}
+    bind:this={handle}
     class="pt-4 pb-6"
   >
     <div class="bg-black/10 grow h-1 rounded-full mx-10 cursor-pointer" />
   </div>
-  <h2 class="flex px-8">
+  <h2 class="flex px-8 mb-0">
     <span class="grow inline-block align-middle">
       {marker.title}
     </span>
@@ -234,16 +265,14 @@
 </div>
 
 <style>
-  /* #content {
-    height: var(--containerheight);
-  } */
+  .italic {
+    font-style: italic;
+  }
   #card {
-    transform: translateY(var(--paddingheight));
+    --dragHeight: 0px;
+    transform: translateY(var(--dragHeight));
   }
   #scroll-view {
     height: var(--containerheight);
-  }
-  .italic {
-    font-style: italic;
   }
 </style>
